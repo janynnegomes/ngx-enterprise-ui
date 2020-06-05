@@ -14,7 +14,7 @@
     "angular",
     "typescript",
     "ui",
-    "loading",
+    "enterprise",
     "component"
   ],
   "license":"MIT",
