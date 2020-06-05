@@ -1,24 +1,54 @@
 # NgxEnterpriseUI
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+This library contains enterprise common components for Angular 8 applications
 
-## Code scaffolding
+# How to install
 
-Run `ng generate component component-name --project NgxEnterpriseUI` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project NgxEnterpriseUI`.
-> Note: Don't forget to add `--project NgxEnterpriseUI` or else it will be added to the default project in your `angular.json` file. 
+**Install Packages**
+`npm install --save ngx-enterprise-ui`
 
-## Build
+**Import the module:**
+```typescript
+//...
+import { NgxEnterpriseUIModule } from 'ngx-enterprise-ui';
 
-Run `ng build NgxEnterpriseUI` to build the project. The build artifacts will be stored in the `dist/` directory.
+@NgModule({
+  //...
+  imports: [
+    //...
+    NgxEnterpriseUIModule
+  ],
+  //...
+})
+export class AppModule { }
+```
+**If you're using [Angular CLI](https://github.com/angular/angular-cli) 6.0.0, add the font-awesome CSS to `styles` inside the `angular.json`**
+```json
+"styles": [
+    "styles.css",
+    "../node_modules/ngx-enterprise-ui/css/ngx-enterprise-ui.css"
+],
+```
+*NOTE: If using SCSS preprocessor just change the `css` for `scss`*
 
-## Publishing
+# Components
 
-After building your library with `ng build NgxEnterpriseUI`, go to the dist folder `cd dist/ngx-enterprise-ui` and run `npm publish`.
+Name      | Usage               
+---       | ---                
+Card      | Show singular set of information.          
 
-## Running unit tests
 
-Run `ng test NgxEnterpriseUI` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Usage and options
+Name        | Type               | Options  | Optional
+---         | ---                | ---      | ---
+title       | `String`           | no       | Yes
+description | `String`           | no       | Yes
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+*Example Use*
+```html
+<ngx-ent-ui-card 
+  title="Hello" 
+  description="I'm a card, you can show an item of a collection">
+</ngx-ent-ui-card>
+```
